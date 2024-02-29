@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* 초기화 */
+body, h1, h2, p, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+address { font-style: normal; }
+body { font-family: "Noto Sans KR", sans-serif; }
+/* 헤더 */
+#header { height: 42px; border-bottom: 1px solid #000;
+          background: linear-gradient(#8e0000, #700000); }
+#header h1 { color: #fff; text-transform: capitalize; 
+             text-align: center; line-height: 42px; }
+#header a { position: absolute; top: 4px; height: 32px; 
+            background: url(../images/sprites.png) no-repeat; 
+            text-indent: 100%; overflow: hidden; }
+#header .btn { left: 4px; width: 62px; }
+#header .toggleBtn { right: 4px; width: 32px; background-position-x: right; }
+/* 토글네비 toggleNav */
+#toggleNav { padding: 20px; background: #808080; }
+#toggleNav  ul { background: #fff; 
+                display: flex;
+                flex-wrap: wrap;
+}   
+#toggleNav  ul li { width: 80px; height: 28px; }
+#toggleNav  ul li a { color: #333; }
+/* topNav */
+#topNav { border-bottom: 2px solid #000;  }
+#topNav ul { display: flex; }
+#topNav ul li { width: 25%; }
+#topNav ul li a { display: block;
+                  background: #820e0e; color: #fff;
+                  text-align: center; line-height: 35px; }
+#topNav ul li a:hover { background: #fff; color: #000; }
+/* bottomNav */
+#bottomNav { border-bottom: 1px solid #000; }
+#bottomNav ul { display: flex; }
+#bottomNav ul li { width: 20%; }
+#bottomNav ul li a { position: relative; display: block; color: #333;
+                     text-align: center; line-height: 35px; }
+#bottomNav ul li a::after { content: ""; 
+                            position: absolute; top: 10px; left: -1px;              
+                            width: 1px; height: 15px; 
+                            background: #000; }
+/* 본문메인 */
+#mainSection { padding: 10px; }
+#mainSection header { padding: 10px; }
+#mainSection p { margin-bottom: 15px; line-height: 24px; }
+/* 푸터 */
+#footer { padding: 20px 0; border-top: 3px solid #000; text-align: center; }
