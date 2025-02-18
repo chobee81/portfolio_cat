@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+
+body, h1, h2, h3, p, ul{ margin:0;  padding:0;}
+li { list-style: none; }
+a { text-decoration:none; color:#555; }
+img { border:0;} 
+
+							
+/* 웹폰트 */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#header {  position:fixed; top:0; left:0; z-index:13; 
+				width:100%; height: 100px; 
+				border-right: 20px solid #ffea00;
+				background: #673ab7 /*url(../img/bgCat.jpg) no-repeat right top*/;
+				background-size: cover;}
+
+
+#header h1 { position: absolute; top: 0; left: 20px; 
+					width: 160px;
+					padding: 10px 0 0 10px;
+					background: #ffea00;  }
+
+/*메뉴*/
+#menu { position:absolute; top:0px; left:250px; z-index:13; 
+			width: 960px; opacity: 0.5; transition-duration: 0.5s;}
+#menu:hover { opacity: 1; }
+#menu li {
+				position: relative;
+				width: 160px; float: left;
+				text-align: center;
+}
+
+#menu a { display:block; height: 100px; 
+				font-size: 24px; overflow:hidden; 
+				box-sizing:border-box;   
+				opacity:0.8; text-transform: uppercase;
+				transition:all 0.5s;
+				font-family: codropsicons;}
+
+				
+/*레이아웃*/
+#wrap { height: 100%; }
+
+
+section { width:100%; 
+		   position:relative;
+		   background-size: cover;
+		   background-repeat: no-repeat;
+		   background-position: center top; 
+		   background-attachment:fixed; 
+		   overflow:hidden;
+		   text-align: center;
+		   font-size: 24px;
+		   color: #808080;
+}
+
+/* 배경이미지 삽입 */
+section:nth-child(1) { background-image: url(../img/bgSectionCat1.jpg); }
+section:nth-child(2) { background-image: url(../img/bgSectionCat2.jpg); }
+section:nth-child(3) { background-image: url(../img/bgSectionCat3.jpg); }
+section:nth-child(4) { background-image: url(../img/bgSectionCat1.jpg); }
+section:nth-child(5) { background-image: url(../img/bgSectionCat1.jpg); }
+section:nth-child(6) { background-image: url(../img/bgSectionCat1.jpg); }
+
+section div { height: 100%; background-color: rgba(0, 0, 0, 0.7); }
+
+section h2 { padding: 150px 0; }				
+
+section li, section li a { color: #fff; font-size: 14px; font-family: Arial;, "맑은고딕"; }
+
+
+/* Common styles for the letters */#menu li span {
+	display: block;
+	font-weight: 900;
+	line-height:100px; 
+	position: relative;
+	color: hsla(0, 0%, 0%, 0.6);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 550px;
+	-ms-perspective: 550px;
+	perspective: 550px;
+	z-index: 1;
+}
+#menu li span:before,#menu li span:after {
+	position: absolute;
+	content: attr(data-letter);
+	line-height: inherit;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+#menu li span:before {
+	text-shadow: none;
+	color: hsla(0, 0%, 0%, 0.12);
+}
+
+/* Colors */
+.ot-letter-bottom span { text-shadow: 1px 1px 2px #999, 0 0 0 hsla(0, 0%, 0%, 0.3), 1px 1px 2px #999; }
+.ot-letter-bottom span:after { color: #fff; }
+.ot-letter-bottom:hover span:after { color: #fff; }
+
+
+/* Down */
+.ot-letter-bottom span:before,
+.ot-letter-bottom span:after {
+	-webkit-transform-origin: 50% 0;
+	-ms-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.ot-letter-bottom span:before {
+	-webkit-transform: scale(1,1.05) skew(4deg,0deg);
+	-ms-transform: scale(1,1.05) skew(4deg,0deg);
+	transform: scale(1,1.05) skew(4deg,0deg);
+}
+
+.ot-letter-bottom span:after {
+	text-shadow: 0px -1px 0px hsla(360, 100%, 100%, 0.1), 0px 3px 1px hsla(0, 0%, 0%, 0.4);
+	-webkit-transform: rotateX(15deg);
+	-ms-transform: rotateX(15deg);
+	transform: rotateX(15deg);
+}
+
+.ot-letter-bottom:hover span:before {
+	-webkit-transform: translateY(-0.035em) scale(1,1.2) skew(10deg,0deg);
+	-ms-transform: translateY(-0.035em) scale(1,1.2) skew(10deg,0deg);
+	transform: translateY(-0.035em) scale(1,1.2) skew(10deg,0deg);
+}
+
+.ot-letter-bottom:hover span:after {
+	-webkit-transform: translateY(0.045em) rotateX(40deg);
+	-ms-transform: translateY(0.045em) rotateX(40deg);
+	transform: translateY(0.045em) rotateX(40deg);
+}
+
+
+
